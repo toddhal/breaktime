@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TODTRIS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="todtris.css" />
+</head>
+<body>
+  <div id="todtris-root">
+    <div id="todtris-title"></div>
+    <div id="todtris-ui">
+      <canvas id="todtris-canvas" width="320" height="640" tabindex="0"></canvas>
+      <div id="todtris-panel">
+        <div>
+          <b>Score:</b> <span id="todtris-score">0</span><br>
+          <b>Level:</b> <span id="todtris-level">1</span><br>
+          <b>Lines:</b> <span id="todtris-lines">0</span>
+        </div>
+        <div class="todtris-sidepanel">
+          <div><b>Hold</b></div>
+          <canvas id="todtris-hold" width="96" height="96"></canvas>
+        </div>
+        <div class="todtris-sidepanel">
+          <div><b>Next</b></div>
+          <canvas id="todtris-next" width="96" height="288"></canvas>
+        </div>
+        <button id="todtris-controls-btn">Show Controls</button>
+        <button id="todtris-leaderboard-btn">Leaderboard</button>
+        <button id="todtris-restart-btn">Restart</button>
+      </div>
+    </div>
+    <div id="todtris-footer">© <span id="todtris-year"></span> TODTRIS by Halvo</div>
+  </div>
+  <!-- Controls Modal -->
+  <div id="todtris-controls-modal" class="todtris-modal">
+    <div class="todtris-modal-content">
+      <h3>Controls</h3>
+      <ul>
+        <li><b>Left/Right Arrow:</b> Move</li>
+        <li><b>Down Arrow:</b> Soft Drop</li>
+        <li><b>Up Arrow:</b> Rotate</li>
+        <li><b>Space:</b> Hard Drop</li>
+        <li><b>H:</b> Hold Piece</li>
+        <li><b>P:</b> Pause</li>
+        <li><b>L:</b> Leaderboard</li>
+        <li><b>?</b> Show Controls</li>
+      </ul>
+      <button id="todtris-controls-close">Close</button>
+    </div>
+  </div>
+  <!-- Leaderboard Modal -->
+  <div id="todtris-leaderboard-modal" class="todtris-modal">
+    <div class="todtris-modal-content" id="todtris-leaderboard-content">
+      <h3>Leaderboard</h3>
+      <ol id="todtris-leaderboard-list"></ol>
+      <button id="todtris-leaderboard-close">Close</button>
+    </div>
+  </div>
+  <!-- High Score Modal -->
+  <div id="todtris-highscore-modal" class="todtris-modal">
+    <div class="todtris-modal-content">
+      <h3>🎉 New High Score! 🎉</h3>
+      <form id="todtris-highscore-form">
+        <label>
+          Enter initials (3 letters):<br>
+          <input id="todtris-highscore-input" type="text" maxlength="3" autocomplete="off" required pattern="[A-Za-z]{1,3}">
+        </label>
+        <button type="submit">Save</button>
+      </form>
+    </div>
+  </div>
+  <script src="todtris.js"></script>
+</body>
+</html>
