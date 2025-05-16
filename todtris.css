@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(120deg, #18192b 60%, #223 100%);
+  color: #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+}
+
+#todtris-root {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px 0 32px 0;
+}
+
+#todtris-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+#todtris-ui {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#todtris-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  min-width: 150px;
+}
+
+.todtris-sidepanel {
+  margin-bottom: 10px;
+}
+
+#todtris-footer {
+  text-align: center;
+  margin-top: 36px;
+  color: #aaa;
+  font-size: 15px;
+}
+
+button {
+  background: #00FFFF;
+  color: #222;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  padding: 10px 24px;
+  margin-top: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#todtris-canvas {
+  background: #101025;
+  border-radius: 14px;
+  box-shadow: 0 6px 32px #0009;
+  outline: none;
+}
+
+#todtris-hold, #todtris-next {
+  background: #161634;
+  border-radius: 8px;
+  margin-top: 6px;
+}
+
+.todtris-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0; right: 0; bottom: 0;
+  background: rgba(24, 25, 43, 0.92);
+  align-items: center;
+  justify-content: center;
+}
+.todtris-modal.show {
+  display: flex;
+}
+.todtris-modal-content {
+  background: #202342;
+  color: #fff;
+  padding: 32px 38px 32px 38px;
+  border-radius: 16px;
+  min-width: 300px;
+  box-shadow: 0 6px 32px #0007;
+  max-width: 95vw;
+}
+.todtris-modal-content button {
+  margin-top: 20px;
+  width: 100%;
+}
+#todtris-leaderboard-list {
+  padding-left: 24px;
+}
+@media (max-width: 700px) {
+  #todtris-ui { flex-direction: column; gap: 0; }
+  #todtris-panel { flex-direction: row; gap: 12px; min-width: unset; }
+}
