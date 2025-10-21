@@ -33,4 +33,4 @@ Refresh
 --------------------------------
 
 P:\Projects\AI Detail\html_miner_scraper\Data\html_files\DI
-P:\Projects\AI Detail\html_miner_scraper\Data\html_files\DI
+xcopy "P:\Projects\AI Detail\html_miner_scraper\Data\html_files\DI\*" . /E /I
