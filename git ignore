@@ -1,0 +1,6 @@
+echo disability POMS.zip > .gitignore
+```
+
+Then run this command to add the second file:
+```
+echo disability POMS (2).zip >> .gitignore
