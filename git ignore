@@ -4,3 +4,7 @@ echo disability POMS.zip > .gitignore
 Then run this command to add the second file:
 ```
 echo disability POMS (2).zip >> .gitignore
+
+
+warning: in the working copy of 'VOC disability POMS/0425999001.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'VOC disability POMS/0425999002.html', LF will be replaced by CRLF the next time Git touches it
